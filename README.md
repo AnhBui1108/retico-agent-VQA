@@ -18,3 +18,24 @@ Point&Ask is a prototype project that demonstrates real-time visual question ans
 - Follow-up questions: Maintains context across 2-3 related questions
 
 ## Installation:
+### Prerequisites
+- Python 3.10+
+- smolAgents 1.19.x
+### Set up
+**Clone the repository:**
+
+```bash
+git clone https://github.com/AnhBui1108/retico-agent-VQA.git
+cd retico-agent-VQA
+```
+You also need to add to your Python path the retico-vision, retico-core module you can download from the Retico GitHub repository.
+
+**Configure API access:** Edit runner_project.py and add your API key 
+
+```bash
+model = OpenAIServerModel(
+    model_id= "qwen/qwen2.5-vl-32b-instruct:free",
+    api_base = "https://openrouter.ai/api/v1",
+    stream = False,
+    api_key="YOUR_API_KEY")
+```
